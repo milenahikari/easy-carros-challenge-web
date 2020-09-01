@@ -22,9 +22,9 @@ Desafio de Frontend proposto pela [Easy Carros](https://easycarros.com/)
 Segue alguns prints do projeto
 
 <div>
-  <img style="margin: 5px" alt="Welcome" src="https://imgur.com/eWahkyH.png" width="200">
+  <img style="margin: 5px" alt="Welcome" src="https://imgur.com/eWahkyH.png" width="400">
 
-  <img style="margin: 5px" alt="Dashboard" src="https://imgur.com/wJLTgZw.png" width="200">
+  <img style="margin: 5px" alt="Dashboard" src="https://imgur.com/wJLTgZw.png" width="400">
 </div>
 
 ---
