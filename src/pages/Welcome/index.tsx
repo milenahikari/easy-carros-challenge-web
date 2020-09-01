@@ -1,10 +1,17 @@
-import React from 'react';
+import React, { useCallback } from 'react';
+import { useHistory } from 'react-router-dom';
 
 import logo from '../../assets/easy-carros-logo.png';
 
 import { Container, Content } from './styles';
 
 const Welcome: React.FC = () => {
+  const history = useHistory();
+
+  const handleRedirect = useCallback(() => {
+    history.push('/dashboard');
+  }, [history]);
+
   return (
     <Container>
       <Content>
@@ -20,7 +27,9 @@ const Welcome: React.FC = () => {
           esforço e potencial para aprender, se adaptar e tomar decisões.
         </p>
 
-        <button type="button">Entrar</button>
+        <button type="button" onClick={handleRedirect}>
+          Entrar
+        </button>
       </Content>
     </Container>
   );
