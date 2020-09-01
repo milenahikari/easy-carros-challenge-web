@@ -21,7 +21,7 @@ export const Content = styled.div`
       width: 100%;
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 450px) {
       width: 300px;
     }
   }
@@ -31,7 +31,7 @@ export const Content = styled.div`
     color: #0c5990;
     margin-top: 106px;
 
-    @media (max-width: 600px) {
+    @media (max-width: 450px) {
       font-size: 22px;
     }
   }
@@ -52,7 +52,7 @@ export const Content = styled.div`
     color: #fff;
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 450px) {
     padding: 20px;
   }
 `;

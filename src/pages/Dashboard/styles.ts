@@ -6,6 +6,7 @@ export const Container = styled.div`
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+  padding: 20px;
 `;
 
 export const NewOrderService = styled.div`
@@ -23,45 +24,86 @@ export const NewOrderService = styled.div`
     color: #c1c1c1;
   }
 
-  > div {
+  form {
     margin-top: 50px;
 
     input {
+      color: #707070;
       margin-right: 25px;
       height: 40px;
       width: 300px;
       border: 0;
       border-bottom: 2px solid #0c5990;
+
+      @media (max-width: 450px) {
+        width: 100%;
+        margin-top: 20px;
+      }
     }
+  }
+
+  @media (max-width: 450px) {
+    margin-top: 1rem;
   }
 `;
 
 export const ContainerButtons = styled.div`
   display: flex;
   justify-content: flex-end;
+  margin-top: 50px;
 
-  button {
-    margin-right: 25px;
-    width: 168px;
-    padding: 18px;
-    border: 1px solid #0c5990;
-    border-radius: 32px;
-    background: #fff;
-    color: #0c5990;
-  }
+  @media (max-width: 450px) {
+    justify-content: space-around;
 
-  button + button {
-    margin-right: 25px;
-    width: 168px;
-    padding: 18px;
-    border: 0;
-    border-radius: 32px;
-    background: #0c5990;
-    color: #fff;
+    button {
+      margin: 0;
+    }
   }
 `;
 
+export const ButtonCancel = styled.button`
+  background: #fff;
+  color: #0c5990;
+  width: 168px;
+  margin-right: 25px;
+  padding: 18px;
+  border: 1px solid #0c5990;
+  border-radius: 32px;
+
+  @media (max-width: 450px) {
+    height: 40px;
+    width: 100px;
+    font-size: 14px;
+    padding: 5px;
+  }
+`;
+
+export const ButtonConfirm = styled.button`
+  background: #0c5990;
+  color: #fff;
+  width: 168px;
+  margin-right: 25px;
+  padding: 18px;
+  border: 0;
+  border-radius: 32px;
+
+  @media (max-width: 450px) {
+    height: 40px;
+    width: 100px;
+    font-size: 14px;
+    padding: 5px;
+  }
+`;
+
+export const ContentTable = styled.div`
+  overflow-x: auto;
+  /* @media (max-width: 450px) {
+
+  } */
+`;
+
 export const OrderService = styled.table`
+  width: 100%;
   margin-top: 80px;
   border-spacing: 0 1em;
   font-weight: 500;
@@ -71,6 +113,7 @@ export const OrderService = styled.table`
     color: #fff;
 
     td {
+      min-width: 200px;
       padding: 10px;
     }
   }
@@ -90,7 +133,7 @@ export const OrderService = styled.table`
   }
 `;
 
-export const ButtonExcluir = styled.button`
+export const ButtonDelete = styled.button`
   width: 94px;
   padding: 10px;
   border-radius: 32px;
@@ -105,7 +148,7 @@ export const ButtonExcluir = styled.button`
   }
 `;
 
-export const ButtonFinalizar = styled.button`
+export const ButtonFinish = styled.button`
   width: 94px;
   padding: 10px;
   border-radius: 32px;
