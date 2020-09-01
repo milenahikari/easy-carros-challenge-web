@@ -68,6 +68,12 @@ const Dashboard: React.FC = () => {
     localStorage.setItem('@orderServices', parsedService);
   }, []);
 
+  const clearForm = useCallback(() => {
+    setInputNameService('');
+    setInputDate('0000-00-00');
+    setInputIdCar('');
+  }, []);
+
   const handleSubmit = useCallback(
     event => {
       try {
@@ -104,14 +110,15 @@ const Dashboard: React.FC = () => {
         toast.error('Erro ao criar ordem serviço!');
       }
     },
-    [inputNameService, inputDate, inputIdCar, formatDate, handleSaveStorage],
+    [
+      inputNameService,
+      inputDate,
+      inputIdCar,
+      formatDate,
+      handleSaveStorage,
+      clearForm,
+    ],
   );
-
-  const clearForm = useCallback(() => {
-    setInputNameService('');
-    setInputDate('0000-00-00');
-    setInputIdCar('');
-  }, []);
 
   const handleOrderDelete = useCallback(
     (id: string) => {
