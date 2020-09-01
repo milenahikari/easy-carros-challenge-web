@@ -98,6 +98,8 @@ const Dashboard: React.FC = () => {
         setOrderServices(arrayServices);
 
         toast.success('Ordem de serviço criada com sucesso!');
+
+        clearForm();
       } catch (e) {
         toast.error('Erro ao criar ordem serviço!');
       }
@@ -105,7 +107,7 @@ const Dashboard: React.FC = () => {
     [inputNameService, inputDate, inputIdCar, formatDate, handleSaveStorage],
   );
 
-  const handleCancel = useCallback(() => {
+  const clearForm = useCallback(() => {
     setInputNameService('');
     setInputDate('0000-00-00');
     setInputIdCar('');
@@ -196,7 +198,7 @@ const Dashboard: React.FC = () => {
           </div>
 
           <ContainerButtons>
-            <ButtonCancel type="button" onClick={handleCancel}>
+            <ButtonCancel type="button" onClick={clearForm}>
               Cancelar
             </ButtonCancel>
             <ButtonConfirm type="submit">Adicionar</ButtonConfirm>
